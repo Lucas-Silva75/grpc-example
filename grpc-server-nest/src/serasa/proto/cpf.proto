@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package serasa;
+
+service CpfService {
+    rpc consultarCpf(CpfRequest) returns (CpfResponse) {}
+}
+
+message CpfRequest {
+    int32 cpf = 1;
+}
+
+message CpfResponse {
+    string situacao = 1;
+}
