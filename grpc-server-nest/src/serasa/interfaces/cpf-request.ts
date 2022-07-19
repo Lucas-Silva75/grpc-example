@@ -1,3 +1,3 @@
 export interface CpfRequest {
-  cpf: number;
+  cpf: string;
 }
