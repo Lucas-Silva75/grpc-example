@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package serasa;
+
+option java_package = "com.lucasilva.grpc.integration.grpc";
+
+service CpfService {
+    rpc consultarCpf(CpfRequest) returns (CpfResponse) {}
+}
+
+message CpfRequest {
+    string cpf = 1;
+}
+
+message CpfResponse {
+    string situacao = 1;
+}
