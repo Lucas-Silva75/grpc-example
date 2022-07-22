@@ -11,7 +11,9 @@ export class CpfController {
   constructor(private readonly cpfService: CpfService) {}
 
   @GrpcMethod('CpfService', 'consultarCpf')
-  consultarCpf(data: CpfRequest, metadata: Metadata, call: ServerUnaryCall<any, any>): CpfResponse {
+  consultarCpf(data: CpfRequest, metadata: Metadata): CpfResponse {
+
+    console.log('cpf: ' + data.cpf);
     
     return this.cpfService.consultarCpf(data.cpf, metadata);
   }

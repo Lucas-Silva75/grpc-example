@@ -16,7 +16,7 @@ public class EmprestimoResource {
     @Autowired
     private EmprestimoService service;
 
-    @PostMapping()
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
     public Emprestimo concederEmprestimo(@RequestBody @Valid EmprestimoDto emprestimoDto) {
